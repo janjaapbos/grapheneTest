@@ -21,8 +21,8 @@ exports.Container = Relay.createContainer(App, {
   fragments: {
     allEmployees: () => Relay.QL`
       fragment on Employee {
-        id,
-        name,
+        id
+        name
         },
     `,
   },
