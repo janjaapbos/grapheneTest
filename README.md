@@ -17,7 +17,7 @@ const GRAPHQL_PORT = 5000;
 npm install
 
 ## Running
-npm run
+npm start
 
 
 ## Current error:
