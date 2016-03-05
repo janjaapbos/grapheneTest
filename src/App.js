@@ -23,13 +23,13 @@ exports.Container = Relay.createContainer(App, {
       fragment on Employee {
         id
         name
-        },
+      },
     `,
   },
 })
 
 exports.queries = {
-  name: 'AppQueries', // can be anything, just used as an identifier
+  name: 'AppQueries',
   params: {},
   queries: {
     allEmployees: () => Relay.QL`query { allEmployees }`,
