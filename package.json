@@ -1,10 +1,10 @@
 {
-  "name": "nautilus-recipeBookApp",
+  "name": "grapheneTest",
   "version": "0.0.1",
-  "description": "A simple recipe management app demo for Nautilus",
+  "description": "A simple test for graphene flask_sqlalchemy",
   "main": "webpack.config.js",
   "scripts": {
-  "start": "node server.js",
+    "start": "node server.js",
     "lint": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
