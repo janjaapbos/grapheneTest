@@ -1,0 +1,48 @@
+{
+  "name": "nautilus-recipeBookApp",
+  "version": "0.0.1",
+  "description": "A simple recipe management app demo for Nautilus",
+  "main": "webpack.config.js",
+  "scripts": {
+  "start": "node server.js",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-dev-warning": "^0.1.0",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-relay-plugin": "^0.7.2",
+    "immutable": "^3.7.6",
+    "json-loader": "^0.5.4",
+    "lodash": "^3.10.1",
+    "material-ui": "^0.14.1",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5",
+    "react-redux": "^4.0.6",
+    "react-relay": "^0.7.2",
+    "react-tap-event-plugin": "^0.2.1",
+    "redux": "^3.0.5",
+    "redux-responsive": "^0.2.0",
+    "redux-thunk": "^1.0.3",
+    "webpack": "^1.12.9"
+  },
+  "devDependencies": {
+    "babel-cli": "6.5.1",
+    "babel-preset-es2015-loose": "^6.1.4",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.6.2",
+    "react-hot-loader": "^1.3.0",
+    "redux-devtools": "^3.0.1",
+    "redux-devtools-dock-monitor": "^1.0.1",
+    "redux-devtools-log-monitor": "^1.0.1",
+    "webpack-dev-server": "^1.12.1"
+  }
+}
