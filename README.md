@@ -1,5 +1,5 @@
 # grapheneTest
-Testing the example flask_sqlalchemy with a JS relay app
+Testing the example flask_sqlalchemy with a JS react-redux app.
 
 ## Prerequisites
 
@@ -21,11 +21,11 @@ https://medium.com/@thisbejim/getting-started-with-redux-and-graphql-8384b3b25c5
 ## Configuration
 Change server.js to point to the graphql service:
 
-const GRAPHQL_SERVER = '127.0.0.1';
-const GRAPHQL_PORT = 5000;
+    const GRAPHQL_SERVER = '127.0.0.1';
+    const GRAPHQL_PORT = 5000;
 
 ## Installation
-npm install
+    npm install
 
 ## Running
-npm start
+    npm start
