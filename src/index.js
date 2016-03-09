@@ -3,9 +3,6 @@ import 'babel-polyfill'
 // third party imports imports
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Relay from 'react-relay'
-
-import App from './App'
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 // local imports
@@ -16,14 +13,28 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 //https://github.com/zilverline/react-tap-event-plugin
 injectTapEventPlugin()
 
-// the root level component for the application
-const app = (
-    <Relay.RootContainer 
-        Component={App.Container}
-        route={App.queries}
-        onReadyStateChange={({error}) => { if (error) console.error(error) }}
-    />
-)
+import { createStore, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import { queryReducer } from "./app/reducers/reducers.js";
+import thunkMiddleware from "redux-thunk";
 
-// render the routed application
-ReactDOM.render(app, document.getElementById('app'))
+const createStoreWithMiddleware = applyMiddleware(
+  thunkMiddleware
+)(createStore)
+
+import { QueryContainer } from "./app/components/Query.js";
+
+const Main = () => {
+  return (
+    <div>
+      <QueryContainer />
+    </div>
+  )
+};
+
+ReactDOM.render(
+  <Provider store={createStoreWithMiddleware(queryReducer)}>
+    <Main />
+  </Provider>,
+  document.getElementById("example")
+);

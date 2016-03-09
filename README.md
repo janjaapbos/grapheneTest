@@ -7,6 +7,17 @@ Start the example GraphQL service, as described in:
 
 https://github.com/graphql-python/graphene/tree/master/examples/flask_sqlalchemy
 
+
+## No relay
+
+I first tried using react-relay, but run into compatibility issues
+with graphene relay. Without relay, using react-redux, it works
+fine.
+
+Credits to the tutorial:
+https://medium.com/@thisbejim/getting-started-with-redux-and-graphql-8384b3b25c56
+
+
 ## Configuration
 Change server.js to point to the graphql service:
 
@@ -18,26 +29,3 @@ npm install
 
 ## Running
 npm start
-
-
-## Current error:
-I am doing something wrong. Loading the JS app fires the following query:
-
-    query App{
-      allEmployees{...F0}} fragment F0 on Employee{id,name}
-
-Which gives the following error:
-
-    {
-      "errors": [
-        {
-          "message": "Fragment F0 cannot be spread here as objects of type EmployeeDefaultConnection can never be of type Employee",
-          "locations": [
-            {
-              "column": 16,
-              "line": 2
-            }
-          ]
-        }
-      ]
-    }
